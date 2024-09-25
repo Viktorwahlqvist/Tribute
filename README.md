@@ -1,1 +1,1 @@
-# Tribute
+A school exercise where we were asked to honor a person. I chose to develop it further and use grid layout to learn, as it looks very nice. I also implemented responsive design so that it works on all types of devices.
