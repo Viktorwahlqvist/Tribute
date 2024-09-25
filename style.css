@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+/* Nollställer padding, margin och ändrar box-sizing till border box
+för att lättare kunna veta den total ytan. Väljer text stil, backgrunds färg och väljer även
+att det ska vara letter spacing för lite snyggare.*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite DE Grund", cursive;
+    background-color: aliceblue;
+    letter-spacing: 2px;
+}
+/* väljer text storlek, text skugga för det ska bli lite snyggare och väljer
+även att texten ska vara i mitten. detta inkluderar alla rubriker. */
+.header1, .header2, .header-lista{
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px gray;
+}
+/* Här är containern som är main taggen i min hmtl. Jag väljer display grid för 
+att jag vill att det ska visas som kolumner, därför så skriver jag
+grid template columns och att det ska repeteras med auto fit så det ska ändras automatiskt
+när man ändrar storleken på sidan. väljer en minmax och att alla kolumner ska vara lika stora.
+Väljer även att det ska vara 10px gap mellan och 10 px padding samt margin. */
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+/* Väljer här att bilderna ska ha lite skugga för snygga till det, samt att det ska vara i center.
+skriver en width storlek så att alla bilder ska vara ungefär lika stora. väljer display block
+så att det ska vara i containern och inte hamna utanför.  */
+.box img{
+    box-shadow: 2px 2px 2px 2px;
+    align-items: center;
+    width: 300px;
+    display: block;
+    margin: auto;
+    padding: 10px 10px;
+}
+
+.box{
+    /* Väljer även här att alla olika boxarna ska ha skugga, vara i center, auto width samt height
+    så den justeras efter containern. ger den ene backgrunds färg och border, border radius 
+    för att det inte ska vara skarpa hörn. */
+    box-shadow: 5px 10px 2px gray;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px;
+    width: 100%;
+}
+li{ 
+    /* Här tar jag bort de vanliga bullets för att byta ut mot en stjärna. */
+    padding-top: 10px;
+    list-style: none;
+    display: list-item;
+    list-style-type: "⭐";
+}
+/* Padding left för att inte stjärnorna ska komma utanför containern. */
+ul {
+    padding-left: 20px;
+  }
+  /* mina img är en url så om man klickar på bilden kommer man till en hemsida. därför har jag img hover
+  så att man märker att någonting händer när man rör muspekaren över bilderna. */
+.box img:hover{
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 2px #735D78;
+}
